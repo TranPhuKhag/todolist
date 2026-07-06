@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/dto/request/TaskCreationRequest.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/dto/request/TaskCreationRequest.java" />
+              <option name="originalContent" value="&#10;    @NotBlank(message = &quot;Tiêu đề công việc không được để trống&quot;)&#10;    @Size(max = 255, message = &quot;Tiêu đề công việc không được vượt quá 255 ký tự&quot;)&#10;    String title;&#10;&#10;    @Size(max = 1000, message = &quot;Mô tả công việc không được vượt quá 1000 ký tự&quot;)&#10;    String description;&#10;&#10;    @NotNull(message = &quot;Ưu tiên không được để trống&quot;)&#10;    TaskPriority priority;&#10;}&#10;package com.example.todolist.dto.request;&#10;&#10;import com.example.todolist.enums.TaskPriority;&#10;import jakarta.validation.constraints.NotBlank;&#10;import jakarta.validation.constraints.NotNull;&#10;import jakarta.validation.constraints.Size;&#10;import lombok.*;&#10;import lombok.experimental.FieldDefaults;&#10;" />
+              <option name="updatedContent" value="package com.example.todolist.dto.request;&#10;&#10;import com.example.todolist.enums.TaskPriority;&#10;import jakarta.validation.constraints.NotBlank;&#10;import jakarta.validation.constraints.NotNull;&#10;import jakarta.validation.constraints.Size;&#10;import lombok.*;&#10;import lombok.experimental.FieldDefaults;&#10;&#10;@Data&#10;@Builder&#10;@NoArgsConstructor&#10;@AllArgsConstructor&#10;@FieldDefaults(level = AccessLevel.PRIVATE)&#10;public class TaskCreationRequest {&#10;&#10;    @NotBlank(message = &quot;Tiêu đề công việc không được để trống&quot;)&#10;    @Size(max = 255, message = &quot;Tiêu đề công việc không được vượt quá 255 ký tự&quot;)&#10;    String title;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/dto/response/TaskResponse.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/dto/response/TaskResponse.java" />
+              <option name="originalContent" value="package com.example.todolist.dto.response;&#10;&#10;import com.example.todolist.enums.TaskPriority;&#10;import com.example.todolist.enums.TaskStatus;&#10;import lombok.*;&#10;import lombok.experimental.FieldDefaults;&#10;&#10;import java.time.LocalDateTime;&#10;&#10;@Data&#10;@Builder&#10;@NoArgsConstructor&#10;@AllArgsConstructor&#10;@FieldDefaults(level = AccessLevel.PRIVATE)&#10;public class TaskResponse {&#10;&#10;    Long id;&#10;    String title;&#10;    String description;&#10;    TaskStatus status;&#10;    TaskPriority priority;&#10;    LocalDateTime dueDate;&#10;    LocalDateTime createdAt;&#10;    LocalDateTime updatedAt;&#10;}" />
+              <option name="updatedContent" value="package com.example.todolist.dto.response;&#10;&#10;import com.example.todolist.enums.TaskPriority;&#10;import com.example.todolist.enums.TaskStatus;&#10;import lombok.*;&#10;import lombok.experimental.FieldDefaults;&#10;&#10;import java.time.LocalDateTime;&#10;&#10;@Data&#10;@Builder&#10;@NoArgsConstructor&#10;@AllArgsConstructor&#10;@FieldDefaults(level = AccessLevel.PRIVATE)&#10;public class TaskResponse {&#10;&#10;    Long id;&#10;    String title;&#10;    String description;&#10;    TaskStatus status;&#10;    TaskPriority priority;&#10;    LocalDateTime dueDate;&#10;    LocalDateTime createdAt;&#10;    LocalDateTime updatedAt;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/enums/TaskPriority.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/enums/TaskPriority.java" />
+              <option name="originalContent" value="package com.example.todolist.enums;&#10;&#10;public enum TaskPriority {&#10;    HIGH,&#10;    MEDIUM,&#10;    LOW&#10;}" />
+              <option name="updatedContent" value="package com.example.todolist.enums;&#10;&#10;public enum TaskPriority {&#10;    HIGH,&#10;    MEDIUM,&#10;    LOW&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/enums/TaskStatus.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/enums/TaskStatus.java" />
+              <option name="originalContent" value="package com.example.todolist.enums;&#10;&#10;public enum TaskStatus {&#10;    PENDING,&#10;    IN_PROGRESS,&#10;    COMPLETED&#10;}" />
+              <option name="updatedContent" value="package com.example.todolist.enums;&#10;&#10;public enum TaskStatus {&#10;    PENDING,&#10;    IN_PROGRESS,&#10;    COMPLETED&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/repository/TaskRepository.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/todolist/src/main/java/com/example/todolist/repository/TaskRepository.java" />
+              <option name="originalContent" value="package com.example.todolist.repository;&#10;&#10;import com.example.todolist.entity.Task;&#10;import org.springframework.data.jpa.repository.JpaRepository;&#10;import org.springframework.data.jpa.repository.JpaSpecificationExecutor;&#10;import org.springframework.stereotype.Repository;&#10;&#10;@Repository&#10;public interface TaskRepository extends JpaRepository&lt;Task, Long&gt;, JpaSpecificationExecutor&lt;Task&gt; {&#10;}" />
+              <option name="updatedContent" value="package com.example.todolist.repository;&#10;&#10;import com.example.todolist.entity.Task;&#10;import org.springframework.data.jpa.repository.JpaRepository;&#10;import org.springframework.data.jpa.repository.JpaSpecificationExecutor;&#10;import org.springframework.stereotype.Repository;&#10;&#10;@Repository&#10;public interface TaskRepository extends JpaRepository&lt;Task, Long&gt;, JpaSpecificationExecutor&lt;Task&gt; {&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
