@@ -25,7 +25,6 @@ public class TaskMapperImpl implements TaskMapper {
         task.title( request.getTitle() );
         task.description( request.getDescription() );
         task.priority( request.getPriority() );
-        task.dueDate( request.getDueDate() );
 
         return task.build();
     }
@@ -43,7 +42,6 @@ public class TaskMapperImpl implements TaskMapper {
         taskResponse.description( entity.getDescription() );
         taskResponse.status( entity.getStatus() );
         taskResponse.priority( entity.getPriority() );
-        taskResponse.dueDate( entity.getDueDate() );
         taskResponse.createdAt( entity.getCreatedAt() );
         taskResponse.updatedAt( entity.getUpdatedAt() );
 

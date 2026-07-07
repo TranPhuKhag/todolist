@@ -19,7 +19,6 @@ public class TaskResponse {
     String description;
     TaskStatus status;
     TaskPriority priority;
-    LocalDateTime dueDate;
     LocalDateTime createdAt;
     LocalDateTime updatedAt;
 }

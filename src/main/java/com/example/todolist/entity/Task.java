@@ -30,12 +30,10 @@ public class Task {
     String description;
 
     @Enumerated(EnumType.STRING)
-    TaskStatus status;
+    TaskStatus status = TaskStatus.PENDING;
 
     @Enumerated(EnumType.STRING)
-    TaskPriority priority;
-
-    LocalDateTime dueDate;
+    TaskPriority priority =  TaskPriority.MEDIUM;
 
     @CreationTimestamp
     @Column(updatable = false)
@@ -43,4 +41,7 @@ public class Task {
 
     @UpdateTimestamp
     LocalDateTime updatedAt;
+
+    @Column(name = "deleted")
+    int deleted = 0;
 }
